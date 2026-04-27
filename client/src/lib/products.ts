@@ -9,34 +9,33 @@ export interface Product {
   priceLabel?: string;
 }
 
-// Individual product images cropped from flyers
+// Real individual product photos provided by the owner
 const IMG = {
   // Always Available
-  cakePops: "/manus-storage/cake-pops_77fc4a1d.jpg",
-  grapeCandyKabobs: "/manus-storage/grape-candy-kabobs_bfed7220.jpg",
-  artisanalGummyKabobs: "/manus-storage/artisanal-gummy-kabobs_d3e6a8fd.jpg",
-  // Mother's Day - Flyer 1
-  momMugBerryBouquet: "/manus-storage/mom-mug-berry-bouquet_43ccd435.jpg",
-  pictureFrameBouquet: "/manus-storage/picture-frame-bouquet_1106e6c7.jpg",
-  globeBouquet: "/manus-storage/globe-bouquet_2335b9ca.jpg",
-  letterMBasket: "/manus-storage/letter-m-basket_10a0e466.jpg",
-  // Mother's Day - Flyer 2 (Curated Collections)
-  tootieFruityCandyBox: "/manus-storage/tootie-fruity-candy-box_c3dfcb7c.jpg",
-  teddyBearBalloonBoxes: "/manus-storage/teddy-bear-balloon-boxes_6bddd3df.jpg",
-  realFlowerBalloonBox: "/manus-storage/real-flower-balloon-box_2bf8e143.jpg",
-  heartBalloonFlower: "/manus-storage/heart-balloon-flower_f851e768.jpg",
-  flowerTumblerGiftSet: "/manus-storage/flower-tumbler-gift-set_ffb2d3d4.jpg",
-  fieraRochaBouquet: "/manus-storage/fiera-rocha-bouquet_6e606b17.jpg",
-  kinderFlowerBox: "/manus-storage/kinder-flower-box_1677a048.jpg",
-  deluxeTeddyBearGiftSet: "/manus-storage/deluxe-teddy-bear-gift-set_68c5aa2f.jpg",
-  airBalloonBouquetBox: "/manus-storage/air-balloon-bouquet-box_75c2bc5c.jpg",
+  cakePops: "/manus-storage/cake-pops_77fc4a1d.jpg", // No individual photo provided — keeping cropped flyer image
+  grapeCandyKabobs: "/manus-storage/photo_AQADjgxrGwHkgEd-_49bb75a2.jpg",
+  artisanalGummyKabobs: "/manus-storage/photo_AQADfwxrGwHkgEd-_2c0c2852.jpg",
+  // Mother's Day
+  momMugBerryBouquet: "/manus-storage/photo_AQADjwxrGwHkgEd-_cf8a812b.jpg",
+  pictureFrameBouquet: "/manus-storage/photo_AQADkQxrGwHkgEd-_f76a936e.jpg",
+  globeBouquet: "/manus-storage/photo_AQADkgxrGwHkgEd-_1a829bbf.jpg",
+  letterMBasket: "/manus-storage/photo_AQADkAxrGwHkgEd-_96d2ee17.jpg",
+  tootieFruityCandyBox: "/manus-storage/photo_AQADhwxrGwHkgEd-_7b13b326.jpg",
+  teddyBearBalloonBoxes: "/manus-storage/photo_AQADkwxrGwHkgEd-_184ce9f7.jpg",
+  realFlowerBalloonBox: "/manus-storage/photo_AQADhgxrGwHkgEd-_c1f988e9.jpg",
+  heartBalloonFlower: "/manus-storage/photo_AQADhQxrGwHkgEd-_b1b371a9.jpg",
+  flowerTumblerGiftSet: "/manus-storage/photo_AQADhAxrGwHkgEd-_93771798.jpg",
+  fieraRochaBouquet: "/manus-storage/photo_AQADgwxrGwHkgEd-_a644b4c0.jpg",
+  kinderFlowerBox: "/manus-storage/photo_AQADggxrGwHkgEd-_f439419f.jpg",
+  deluxeTeddyBearGiftSet: "/manus-storage/photo_AQADgQxrGwHkgEd-_0e3d960d.jpg",
+  airBalloonBouquetBox: "/manus-storage/photo_AQADgAxrGwHkgEd-_d28876a0.jpg",
   // Graduation
-  candyBouquetBalloons: "/manus-storage/candy-bouquet-balloons_6f6ffb79.jpg",
-  moneyCake: "/manus-storage/money-cake_2c9e2677.jpg",
-  graduationBouquet: "/manus-storage/graduation-bouquet_70d3d5ce.jpg",
-  candyJar: "/manus-storage/candy-jar_f4a5dd82.jpg",
-  candyGradNecklace: "/manus-storage/candy-grad-necklace_c06cdc50.jpg",
-  grandRibbonMoneyNecklace: "/manus-storage/grand-ribbon-money-necklace_530733a3.jpg",
+  candyBouquetBalloons: "/manus-storage/photo_AQADjQxrGwHkgEd-_aeee4239.jpg",
+  moneyCake: "/manus-storage/photo_AQADjAxrGwHkgEd-_9cfd5a52.jpg",
+  graduationBouquet: "/manus-storage/photo_AQADiwxrGwHkgEd-_224f72c1.jpg",
+  candyJar: "/manus-storage/photo_AQADigxrGwHkgEd-_99d103d1.jpg",
+  candyGradNecklace: "/manus-storage/photo_AQADiQxrGwHkgEd-_3e021b19.jpg",
+  grandRibbonMoneyNecklace: "/manus-storage/photo_AQADiAxrGwHkgEd-_4ed9e38c.jpg",
 };
 
 export const products: Product[] = [
