@@ -39,6 +39,10 @@ export default function Footer() {
             <div className="space-y-2.5">
               {[
                 { href: "/", label: "Home" },
+                { href: "/packages", label: "Packages" },
+                { href: "/about", label: "About Us" },
+                { href: "/contact", label: "Contact" },
+                { href: "/rentals", label: "Party Rentals" },
                 { href: "/shop", label: "Shop" },
               ].map((link) => (
                 <Link

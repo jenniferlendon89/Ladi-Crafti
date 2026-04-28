@@ -8,7 +8,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Heart, Star, Palette, Sparkles, ArrowRight, Gift, Phone } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
-import { alwaysAvailable } from "@/lib/products";
+import { sweetTreats } from "@/lib/products";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435458667/MjhFGKw2MXYquUAiTQcN9F/hero-banner-JM8pa7UT9bMZx6iBXDUX3P.webp";
 
@@ -143,7 +143,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {alwaysAvailable.map((product) => (
+            {sweetTreats.map((product: any) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>

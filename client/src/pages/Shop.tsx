@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { Sparkles, Gift, GraduationCap, ShoppingBag } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import {
-  alwaysAvailable,
+  sweetTreats,
   mothersDayProducts,
   graduationProducts,
 } from "@/lib/products";
@@ -17,11 +17,11 @@ const SHOP_HERO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435458667/MjhF
 const MOTHERS_DAY_BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435458667/MjhFGKw2MXYquUAiTQcN9F/mothers-day-banner-KgSosK8ZXg4rjy4H7A63v2.webp";
 const GRADUATION_BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435458667/MjhFGKw2MXYquUAiTQcN9F/graduation-banner-HxG6Tm8BezLwHoELjQcQnt.webp";
 
-type Category = "all" | "always-available" | "mothers-day" | "graduation";
+type Category = "all" | "sweet-treats" | "mothers-day" | "graduation";
 
 const categories: { id: Category; label: string; icon: typeof Sparkles }[] = [
   { id: "all", label: "All Products", icon: ShoppingBag },
-  { id: "always-available", label: "Always Available", icon: Sparkles },
+  { id: "sweet-treats", label: "Sweet Treats", icon: Sparkles },
   { id: "mothers-day", label: "Mother's Day", icon: Gift },
   { id: "graduation", label: "Graduation", icon: GraduationCap },
 ];
@@ -98,7 +98,7 @@ export default function Shop() {
       </div>
 
       {/* Always Available */}
-      {(activeCategory === "all" || activeCategory === "always-available") && (
+      {(activeCategory === "all" || activeCategory === "sweet-treats") && (
         <section id="always-available" className="py-16 scroll-mt-32">
           <div className="container">
             <div className="mb-10">
@@ -117,7 +117,7 @@ export default function Shop() {
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {alwaysAvailable.map((product) => (
+              {sweetTreats.map((product: any) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
