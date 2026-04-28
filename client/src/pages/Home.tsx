@@ -6,9 +6,9 @@
 
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Heart, Star, Palette, Sparkles, ArrowRight, Gift, Phone } from "lucide-react";
+import { Heart, Star, Palette, Sparkles, ArrowRight, Gift, Phone, Check } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
-import { sweetTreats } from "@/lib/products";
+import { sweetTreats, mothersDayProducts, graduationProducts } from "@/lib/products";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435458667/MjhFGKw2MXYquUAiTQcN9F/hero-banner-JM8pa7UT9bMZx6iBXDUX3P.webp";
 
@@ -32,6 +32,30 @@ const features = [
     icon: Sparkles,
     title: "Worry-Free Experience",
     desc: "Setup, entertainment, and cleanup handled. You stay present for your celebration.",
+  },
+];
+
+const packages = [
+  {
+    id: "pup-ty-bash",
+    name: "The Pup-ty Bash",
+    subtitle: "For the member of the family with four legs",
+    price: 325,
+    features: ["Balloon Hoop or Arch", "12 Dog-Safe Pup-cakes", "12 Matching Cookies"],
+  },
+  {
+    id: "sweet-social",
+    name: "The Sweet & Social",
+    subtitle: "Perfect for life's most intimate milestones",
+    price: 375,
+    features: ["8ft Organic Balloon Garland", "Customized Easel Sign", "2 Dozen Luxury Treats"],
+  },
+  {
+    id: "fun-festivities",
+    name: "The Fun & Festivities",
+    subtitle: "The classic birthday, elevated",
+    price: 450,
+    features: ["1 Hour Professional Face Painting", "6ft Custom Balloon Backdrop", "2 Dozen Themed Cupcakes"],
   },
 ];
 
@@ -126,20 +150,77 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Always Available Preview */}
+      {/* Event Packages Preview */}
       <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-14">
+            <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+              Our Services
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold">
+              Event <span className="text-primary italic">Packages</span>
+            </h2>
+            <p className="text-muted-foreground mt-3 max-w-md mx-auto text-sm">
+              Customizable packages for every celebration. Choose from our popular options or build your own.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {packages.map((pkg, i) => (
+              <motion.div
+                key={pkg.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.4 }}
+                className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-colors"
+              >
+                <h3 className="font-serif text-lg font-bold mb-2">
+                  {pkg.name}
+                </h3>
+                <p className="text-xs text-muted-foreground mb-3">
+                  {pkg.subtitle}
+                </p>
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className="font-serif text-2xl font-bold text-primary">
+                    ${pkg.price}
+                  </span>
+                  <span className="text-xs text-muted-foreground">+</span>
+                </div>
+                <div className="space-y-2 mb-4">
+                  {pkg.features.slice(0, 2).map((feature) => (
+                    <div key={feature} className="flex items-start gap-2">
+                      <Check className="w-3 h-3 text-primary mt-0.5 shrink-0" />
+                      <span className="text-xs text-foreground">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/packages"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+            >
+              View All Packages
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Sweet Treats Preview */}
+      <section className="py-20 bg-secondary/30">
         <div className="container">
           <div className="text-center mb-14">
             <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
               Our Handcrafted Collection
             </p>
             <h2 className="font-serif text-3xl md:text-4xl font-bold">
-              Always <span className="text-primary italic">Available</span>{" "}
-              Treats
+              Sweet <span className="text-primary italic">Treats</span>
             </h2>
             <p className="text-muted-foreground mt-3 max-w-md mx-auto text-sm">
-              Indulgent cake pops, candy kabobs, and gummy kabobs — handcrafted
-              with love and available year-round.
+              Indulgent cake pops, candy kabobs, and gummy kabobs — handcrafted with love and available year-round.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -152,7 +233,58 @@ export default function Home() {
               href="/shop"
               className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
             >
-              View All Products
+              View All Sweet Treats
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Seasonal Gifts Preview */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-14">
+            <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+              Seasonal Collections
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold">
+              Seasonal <span className="text-primary italic">Gifts</span>
+            </h2>
+            <p className="text-muted-foreground mt-3 max-w-md mx-auto text-sm">
+              Celebrate special occasions with our curated Mother's Day and Graduation gift collections.
+            </p>
+          </div>
+
+          {/* Mother's Day Preview */}
+          <div className="mb-16">
+            <h3 className="font-serif text-2xl font-bold mb-6 text-center">
+              Mother's Day <span className="text-primary italic">Gifts</span>
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {mothersDayProducts.slice(0, 4).map((product: any) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+
+          {/* Graduation Preview */}
+          <div className="mb-10">
+            <h3 className="font-serif text-2xl font-bold mb-6 text-center">
+              Graduation <span className="text-primary italic">Gifts</span>
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {graduationProducts.slice(0, 3).map((product: any) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/shop"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+            >
+              View All Seasonal Gifts
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

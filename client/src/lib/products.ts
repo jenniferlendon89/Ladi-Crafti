@@ -21,7 +21,7 @@ const IMG = {
   globeBouquet: "/manus-storage/photo_AQADkwxrGwHkgEd-_184ce9f7.jpg",
   letterMBasket: "/manus-storage/photo_AQADkQxrGwHkgEd-_f76a936e.jpg",
   tootieFruityCandyBox: "/manus-storage/photo_AQADiAxrGwHkgEd-_4ed9e38c.jpg",
-  teddyBearBalloonBoxes: "/manus-storage/photo_AQADlAxrGxBHgUd-.jpg", // NEW: photo_AQADlAxrGxBHgUd-.jpg
+  teddyBearBalloonBoxes: "/manus-storage/photo_AQADlAxrGwHkgEd-_926056ef.jpg",
   realFlowerBalloonBox: "/manus-storage/photo_AQADhwxrGwHkgEd-_7b13b326.jpg",
   heartBalloonFlower: "/manus-storage/photo_AQADhgxrGwHkgEd-_c1f988e9.jpg",
   flowerTumblerGiftSet: "/manus-storage/photo_AQADhAxrGwHkgEd-_93771798.jpg",
